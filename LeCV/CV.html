@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="stylesheet" href="CV.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- "Feuille" du CV -->
+      <header>
+        <h1>MATEO GUENOT</h1>
+        <div>Etudiant BUT Info</div>
+        <div id="Trait"></div>
+        <!-- Fait un trait avec du css -->
+      </header>
+      <aside>
+        <div>
+          <!-- Ici une div car pas de titre donc ce n'est pas un article -->
+          <img id="Photo" src="001v.jpg" alt="photo de profil" />
+        </div>
+        <article>
+          <h2>PERSONNEL</h2>
+          <div class="Personnel">
+            <span class="Nom-Age">Nom</span><span>Mateo Guenot</span>
+            <span class="Nom-Age">Age</span><span>18 ans</span>
+            <span class="Nom-Age">Nationnalité</span><span>Français</span>
+            <span class="Nom-Age">Langues</span><span>Français, Anglais</span>
+          </div>
+        </article>
+        <article>
+          <h2>CONTACT</h2>
+          <div class="Personnel">
+            <span class="Mobile-Mail">Mobile</span><span>06 23 88 68 46</span>
+            <span class="Mobile-Mail">Mail</span
+            ><span id="break">mateo.guenot2003@gmail.com</span>
+            <span class="Mobile-Mail">Adresse</span
+            ><span>601 Rue du genetay</span>
+
+          </div>
+        </article>
+        <article>
+          <h2>CENTRES D'INTÉRÊT</h2>
+          <div class="Trait-noir-aside"></div>
+          <div id="logo">
+            <!-- Pour faire du grid sur css -->
+            <div class="Voyage">
+              <!-- Pour ajouter le texte qui apparait en dessous -->
+              <img
+                src="Avionpng_transparent.png"
+                alt="logo-voyage"
+                class="Image"
+              />
+              <div class="content">
+                <p>Voyages</p>
+              </div>
+            </div>
+            <div class="Velo">
+              <img src="Velo_transparent.png" alt="logo-velo" class="Image" />
+              <div class="content">
+                <p>Vélo</p>
+              </div>
+            </div>
+            <div class="Musique">
+              <img
+                src="Musique_transparent.png"
+                alt="logo-musique"
+                class="Image"
+              />
+              <div class="content">
+                <p>Musique</p>
+              </div>
+            </div>
+            <div class="Info">
+              <img src="Info_transparent.png" alt="logo-info" class="Image" />
+              <div class="content">
+                <p>Info</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <h2>LINKEDIN</h2>
+          <div class="Trait-noir-aside"></div>
+          <div id="qr-code">
+            <img
+              src="Linkedin_transparent.png"
+              alt="logo-linkedin"
+              id="linkedin"
+            />
+          </div>
+        </article>
+      </aside>
+      <main>
+        <section class="Profil">
+          <h2>PROFIL</h2>
+          <div class="Trait-noir-main"></div>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            ipsum voluptate aperiam labore fugit omnis itaque natus est quia
+            dolor recusandae dolore quos corporis libero quaerat commodi, optio
+            ullam asperiores!
+          </p>
+        </section>
+        <section class="Expérience">
+          <h2>EXPÉRIENCES</h2>
+          <div class="Trait-noir-main"></div>
+          <div class="Ranger">
+            <span data-year="20??">Titre du poste 1</span>
+            <!-- data-year permet d'enlever du code css -->
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam,
+              dicta enim quisquam illo odit suscipit.
+            </p>
+            <span data-year="20??">Titre du poste 2</span>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              beatae iure rem illum aut. Eum.
+            </p>
+            <span data-year="20??">Titre du poste 3</span>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+              voluptas aperiam laudantium ab inventore a.
+            </p>
+          </div>
+        </section>
+        <section class="Formation">
+          <h2>FORMATION</h2>
+          <div class="Trait-noir-main"></div>
+          <div class="Ranger">
+            <!-- Pour réduire la longueur du texte avec le css -->
+            <span data-year="2020">Obtention du BAC Général</span>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              beatae iure rem illum aut. Eum.
+            </p>
+            <span data-year="2024">BUT Informatique</span>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+              voluptas aperiam laudantium ab inventore a.
+            </p>
+          </div>
+        </section>
+        <section class="Compétences">
+          <h2>COMPÉTENCES</h2>
+          <div class="Trait-noir-main"></div>
+          <div class="Comp-Progress">
+            <progress value="90" max="100" data-comp="HTML/CSS"></progress>
+            <progress value="60" max="100" data-comp="Python"></progress>
+            <progress value="30" max="100" data-comp="C"></progress>
+            <progress value="45" max="100" data-comp="BDD"></progress>
+            <progress value="50" max="100" data-comp="???"></progress>
+            <progress value="50" max="100" data-comp="???"></progress>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          <span class="couleur-inversé">Mateo Guenot</span>, 601 Rue du genetay
+          69480 Lucenay, <span class="couleur-inversé">Téléphone</span> 06 23 88
+          68 46,
+          <span class="couleur-inversé">Mail</span> mateo.guenot2003@gmail.com
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
