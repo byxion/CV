@@ -134,14 +134,14 @@ aside article h2 {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(
-    4,
+    3,
     1fr
   ); /* Permet de faire 4 colonnes de même taille */
   grid-template-rows: 1fr 0.5fr 1fr;
   grid-template-areas:
-    "Voyage . Musique ."
-    ". . . ."
-    ". Velo . Info";
+    "Voyage . Musique"
+    ". . ."
+    ". Velo .";
 }
 
 .Trait-noir-aside {
@@ -152,28 +152,30 @@ aside article h2 {
 
 .Image {
   height: 55px;
-  width: 60px;
+  width: 66px;
 }
 
 .Voyage {
   grid-area: Voyage; /* Pour savoir dans le grid-templates-areas */
 }
 .Velo {
+  position: relative;
   grid-area: Velo;
 }
 .Musique {
   grid-area: Musique;
 }
-.Info {
-  grid-area: Info;
-}
+
 /* %%%%%%%% AFFICHER LE TEXTE SUR PASSAGE SOURIS %%%%%%%%%% */
 .Voyage:hover .content,
 .Velo:hover .content,
-.Musique:hover .content,
-.Info:hover .content {
+.Musique:hover .content{
   opacity: 1;
   transition: 0.2s; /* Permet de faire apparaître le texte moins rapidement */
+}
+
+.Velo:hover .content{
+  top: -20px;
 }
 
 .content {
@@ -223,7 +225,13 @@ main section {
   margin-left: 7vw;
 }
 
-.Ranger p {
+.Ranger span + p {
+  margin-bottom: 5px;
+  color: var(--couleur4);
+  font-style: italic;
+}
+
+.Ranger p + p {
   margin-bottom: 25px;
   color: var(--couleur4);
 }
@@ -318,23 +326,23 @@ footer p {
   #Trait {
     width: 60vw;
   }
-
+  
   article + article {
     width: 25vw;
   }
-
+  
   .Personnel {
     grid-template-columns: 9vw 16vw;
   }
-
+  
   .Trait-noir-aside {
     width: 25vw;
   }
-
+  
   .Trait-noir-main {
     width: 45vw;
   }
-
+  
   .Ranger {
     width: 35vw;
   }
@@ -350,112 +358,136 @@ footer p {
   article + article {
     width: 30vw;
   }
-
+  
   .Personnel {
     grid-template-columns: 12vw 18vw;
   }
-
+  
   .Trait-noir-aside {
     width: 30vw;
   }
-
+  
   .Trait-noir-main {
     width: 48vw;
   }
-
+  
   .Ranger {
     width: 40vw;
   }
-
+  
   .Comp-Progress {
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 30px;
+    width: 80%;
   }
-
+  
   .Comp-Progress :nth-child(even){
     margin-left: 14vw;
   }
-
+  
   progress {
     width: 250px;
   }
 }
 
 @media screen and (max-width:800px){
+  .Comp-Progress{
+    margin-bottom: 50px;
+  }
   #logo {
     display: grid;
-    grid-template-columns: repeat( 2, 1fr );
+    grid-template-columns: repeat( 3, 1fr );
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "Voyage Musique"
-        "Velo Info";
+    "Voyage . Musique"
+    ". Velo .";
     grid-gap: 20px;
   }
   
-@media screen and (max-width:700px) {
-/* FAIRE UNE SEULE COLONNE */
-.container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header"
-    "aside"
-    "main"
-    "footer";
-    margin: 0;
-  }
+  
+  @media screen and (max-width:700px) {
+    /* FAIRE UNE SEULE COLONNE */
+    .container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas:
+      "header"
+      "aside"
+      "main"
+      "footer";
+      margin: 0;
+    }
+    
+    h1 {
+      margin-bottom: 45px;
+    }
+    
+    aside {
+      width: 100%;
+      margin: 0;
+      margin-top: 20px;
+    }
+    
+    aside article,article + article {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 90%;
+      margin-bottom: 50px;
+    }
+    
+    .Personnel {
+      grid-template-columns: 45vw 45vw;
+    }
+    .Trait-noir-aside {
+      width: 90vw;
+    }
+    
+    #logo {
+      width: 70vw;
+    }
 
-h1 {
-  margin-bottom: 45px;
+    .content{
+      position: relative;
+    }
+    
+    #logo > div {
+      display: flex;
+      justify-content: center;
+    }
+    
+    main {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    main > section {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .Trait-noir-main {
+    width: 90vw;
+  }
+  
+  .Ranger span::before {
+    border-top: 13.32px solid transparent;
+    border-bottom: 16.33px solid transparent;
+    bottom: calc(50% - 14px);
+    right: calc(100% + 1px + 0.8vw);
+    
 }
 
-  aside {
-    width: 100%;
-    margin: 0;
-    margin-top: 20px;
-  }
-
-  aside article,article + article {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 90%;
-  }
-
-  .Personnel {
-    grid-template-columns: 30vw 30vw;
-  }
-  .Trait-noir-aside {
-    width: 60vw;
-  }
-
-  #logo {
-    width: 40vw;
-  }
-
-  #logo > div {
-    display: flex;
-    justify-content: center;
-  }
-
-  main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  main > section {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .Trait-noir-main {
-    width: 60vw;
+.Ranger span::after {
+  bottom: calc(50% - 14px);
+  right: calc(100% + 10px + 0.8vw);
 }
 
 .Ranger {
