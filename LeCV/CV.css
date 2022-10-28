@@ -276,6 +276,7 @@ main section {
 }
 
 progress {
+  /* Enlevé apparence de base  */
   -webkit-appearance: none; /* Enlever l'apparence de base */
   margin-top: 20px;
   width: 12vw;
@@ -410,7 +411,7 @@ footer p {
   @media screen and (max-width:700px) {
     /* FAIRE UNE SEULE COLONNE */
     .container {
-      width: 100%;
+      width: 100vw;
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: auto;
@@ -429,7 +430,7 @@ footer p {
     aside {
       width: 100%;
       margin: 0;
-      margin-top: 20px;
+      padding-top: 20px;
     }
     
     aside article,article + article {
@@ -437,7 +438,12 @@ footer p {
       align-items: center;
       flex-direction: column;
       width: 90%;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
+    }
+
+    .Image {
+      width: 55%;
+      height: 66%;
     }
     
     .Personnel {
@@ -499,15 +505,23 @@ footer p {
   height: 30px;
 }
 
-span, p, div {
-  font-size: 25px;
-}
-
 footer p {
   width: 90%;
   word-break: normal;
 }
 
+p {
+  font-size: 15px;
+}
+
+span {
+  font-size: 15px;
+}
+}
+
+@media screen and (max-width:420px) {
+
+  
 }
 }
 
